@@ -1,0 +1,42 @@
+<!--Student ID: 00013557, IssueTracker-->
+<div class="p-8 mt-8 flex justify-center">
+    <form action="" class="shadow border w-4/12 p-4">
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Title</mat-label>
+                <input matInput name="title" type="text" [(ngModel)]="issueToCreate.title">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Description</mat-label>
+                <input matInput name="description" type="text" [(ngModel)]="issueToCreate.description">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Priority</mat-label>
+                <input matInput name="priority" type="text" [(ngModel)]="issueToCreate.priority">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Status</mat-label>
+                <input matInput name="status" type="text" [(ngModel)]="issueToCreate.status">
+            </mat-form-field>
+        </div>
+        <div class="flex">
+            <mat-form-field class="w-full">
+                <mat-label>Choose Username</mat-label>
+                <mat-select [(ngModel)]="selectedUserID" name="User">
+                    @for (selectedUser of users; track selectedUserID){
+                        <mat-option [value]="selectedUser.id">{{selectedUser.username}}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+        </div>
+        <div class="flex justify-center">
+            <button mat-raised button color="primary" (click)="create()">Create</button>
+        </div>
+    </form>
+</div>

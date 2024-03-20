@@ -1,0 +1,27 @@
+<!--Student ID: 00013557, IssueTracker-->
+<div class="flex mt-8 justify-center">
+    <mat-card class="shadow w-4/12">
+        <mat-card-content>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold mb-4">Title: {{ deleteIssue.title }}</h2>
+                <p class="text-gray-700">Description: {{ deleteIssue.description }}</p>
+                <p class="text-gray-700">Priority: {{ deleteIssue.priority }}</p>
+                <p class="text-gray-700">Status: {{ deleteIssue.status }}</p>
+                <div class="mt-4">
+                    <span class="text-gray-600">Username: </span>
+                    <mat-chip class="ml-2">{{ deleteIssue.user.username }}</mat-chip>
+                    <p class="text-gray-700">Email: {{ deleteIssue.user.email }}</p>
+                    <p class="text-gray-700">Position: {{ deleteIssue.user.role }}</p>
+                </div>
+            </div>
+            <div class="flex justify-around">
+                <div>
+                    <button mat-raised-button color="primary" (click)="onHomeButtonClick()">Cancel</button>
+                </div>
+                <div>
+                    <button mat-raised-button color="warn" (click)="onDeleteButtonClick(deleteIssue.id)" >Delete</button>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>

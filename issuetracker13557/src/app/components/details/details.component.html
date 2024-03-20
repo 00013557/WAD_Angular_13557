@@ -1,0 +1,20 @@
+<!--Student ID: 00013557, IssueTracker-->
+<div class="flex mt-8 justify-center">
+    <mat-card class="shadow w-4/12">
+        <mat-card-content>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold mb-4">Title: {{ detailsIssue.title }}</h2>
+                <p class="text-gray-700">Description: {{ detailsIssue.description }}</p>
+                <p class="text-gray-700">Priority: {{ detailsIssue.priority }}</p>
+                <p class="text-gray-700">Status: {{ detailsIssue.status }}</p>
+                <div class="mt-4">
+                    <span class="text-gray-600">Username:</span>
+                    <mat-chip class="ml-2">{{ detailsIssue.user.username }}</mat-chip>
+                    <p class="text-gray-700">Email: {{ detailsIssue.user.email}}</p>
+                    <p class="text-gray-700">Position: {{ detailsIssue.user.role}}</p>
+                </div>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</div>
+
